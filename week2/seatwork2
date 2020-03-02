@@ -1,0 +1,17 @@
+JSON数据格式
+一、	用法
+JSON可以将JavaScript对象中表示的一组数据转换为字符串，然后就可以在函数之间轻松地传递这个字符串，或者在异步应用程序中将字符串从Web客户机传递给服务器端程序。
+示例：
+JSON表示名称/值对（key:value）即：{ "firstName": "Brett" }
+当多个名称/值对串在一起时用“,”隔开：{ "firstName": "Brett", "lastName":"McLaughlin", "email": "brett@newInstance.com" }
+当需要表示一组值时，只需将多个带花括号的记录分组在一起：
+{ "people": [
+  { "firstName": "Brett", "lastName":"McLaughlin", "email": "brett@newInstance.com" },
+  { "firstName": "Jason", "lastName":"Hunter", "email": "jason@servlets.com" },
+  { "firstName": "Elliotte", "lastName":"Harold", "email": "elharo@macfaq.com" }
+]}
+访问数据：people.programmers[0].lastName;
+修改数据：people.musicians[1].lastName = "Rachmaninov";
+将其他JavaScript对象转换为JSON文本：String myObjectInJSON = myObject.toJSONString();
+二、	优点
+    Json易于人阅读和编写，同时也易于机器解析和生成，提高网络传输速率。JSON的另一个优点是它的非冗长性，层次结构简洁清晰。
